@@ -1,0 +1,329 @@
+body, h1, h2, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f2e7;
+    color: #333;
+}
+
+header {
+    background-color: #8b5e3b;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #eac67a;
+}
+
+.hero input {
+    padding: 10px;
+    width: 60%;
+    margin-top: 10px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #8b5e3b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.map {
+    text-align: center;
+    padding: 40px;
+}
+
+.map-container {
+    width: 80%;
+    height: 300px;
+    background-color: #ccc; /* Placeholder for map */
+    margin: auto;
+}
+
+.events {
+    text-align: center;
+    padding: 40px;
+}
+
+.events ul {
+    padding: 10px;
+}
+
+.events li {
+    background-color: #c5a880;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #8b5e3b;
+    color: white;
+    margin-top: 20px;
+}
+
+#map { height: 180px; }
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.vendor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.vendor-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.vendor-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.vendor-card h3 {
+    margin: 10px 0;
+    color: #6b4226;
+}
+
+.vendor-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+.vendor-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    background-color: #6b4226;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#market-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between the cards */
+    justify-content: space-between; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.market-card {
+    width: 30%; /* Adjusted to 30% for a more compact layout */
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.market-card:hover {
+    transform: scale(1.05); 
+}
+
+.market-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .market-card {
+        width: 48%; /* 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .market-card {
+        width: 100%; /* 1 card per row on very small screens */
+    }
+}
+
+
+
+/* About section */
+.about {
+    text-align: center;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.about h2 {
+    color: #6b4226;
+    margin-top: 20px;
+    font-size: 2em; 
+    font-weight: bold;
+}
+
+.about p {
+    color: #555; 
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.about ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.about ul li {
+    color: #6b4226;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.about a {
+    color: #8b5e3b; 
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+body, h1, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+header {
+    background-color: #8b5e3b;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Toggler Button (Hidden on Desktop) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #8b5e3b;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+.back-home {
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    background-color: #8b5e3b;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 999; /* Ensures it's on top of other elements */
+}
+
+.back-home:hover {
+    background-color: #6a4029; /* Darker shade when hovered */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.back-home:active {
+    background-color: #8b5e3b; /* Reset color on click */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+

@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Phsar Thom Thmey",
+        "city": "Phnom Penh",
+        "products": ["Vegetables", "Fruits", "Meat"],
+        "location": "Phnom Penh, Cambodia"
+    },
+    {
+        "name": "Siem Reap Night Market",
+        "city": "Siem Reap",
+        "products": ["Handmade Goods", "Street Food", "Souvenirs"],
+        "location": "Siem Reap, Cambodia"
+    },
+    {
+        "name": "Phsar Natt",
+        "city": "Battambang",
+        "products": ["Organic Vegetables", "Honey", "Rice"],
+        "location": "Battambang, Cambodia"
+    },
+    {
+        "name": "Olympic Market",
+        "city": "Phnom Penh",
+        "products": ["Clothes", "Shoes", "Electronics", "Street Food"],
+        "location": "Phnom Penh, Cambodia"
+    },
+    {
+        "name": "Russian Market (Phsar Toul Tom Poung)",
+        "city": "Phnom Penh",
+        "products": ["Handmade Goods", "Clothing", "Antiques", "Food"],
+        "location": "Phnom Penh, Cambodia"
+    },
+    {
+        "name": "Boeng Keng Kang Market",
+        "city": "Phnom Penh",
+        "products": ["Organic Vegetables", "Fruit", "Local Snacks", "Spices"],
+        "location": "Phnom Penh, Cambodia"
+    }
+]
+
+
+

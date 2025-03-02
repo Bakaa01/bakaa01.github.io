@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khmer Food & Farmers Market Finder</title>
+    <link rel="stylesheet" href="stylefood.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+</head>
+
+<body>
+    <!-- Map Section -->
+    <section class="map">
+        <h1>Markets Near You</h1>
+            <div id="map" style="height: 500px;"></div> 
+
+            <script>        
+                // Initialize the map
+                var map = L.map('map').setView([13.355, 103.860], 6); // Set a default location (Cambodia)
+
+                // Add OpenStreetMap tiles
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                }).addTo(map);
+
+                // Example market data (latitude and longitude coordinates)
+                const markets = [
+                { name: "Phsar Deum Kor", city: "Phnom Penh", latitude: 11.555, longitude: 104.925, description: "Vegetables, Fruits, Meat" },
+                { name: "Siem Reap Night Market", city: "Siem Reap", latitude: 13.355, longitude: 103.860, description: "Handmade Goods, Street Food, Souvenirs" },
+                { name: "Battambang Farmers Market", city: "Battambang", latitude: 13.095, longitude: 103.221, description: "Organic Vegetables, Honey, Rice" },
+                { name: "Olympic Market", city: "Phnom Penh", latitude: 11.544, longitude: 104.921, description: "Clothes, Shoes, Electronics, Street Food" },
+                { name: "Russian Market", city: "Phnom Penh", latitude: 11.550, longitude: 104.917, description: "Handmade Goods, Clothing, Antiques, Food" },
+                { name: "Boeng Keng Kang Market", city: "Phnom Penh", latitude: 11.553, longitude: 104.928, description: "Organic Vegetables, Fruit, Local Snacks, Spices" }
+            ];
+
+                // Add markers for each market on the map
+                markets.forEach(market => {
+                    var marker = L.marker([market.latitude, market.longitude]).addTo(map);
+                    marker.bindPopup(`
+                        <strong>${market.name}</strong><br>
+                        ${market.city}<br>
+                        Products: ${market.description}
+                    `);
+                });
+
+                // Optional: If you want to get user's location and center the map there
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var userLatitude = position.coords.latitude;
+                        var userLongitude = position.coords.longitude;
+
+                        // Center map to user's location
+                        map.setView([userLatitude, userLongitude], 12);
+                        
+                        // Add a marker for the user's location
+                        L.marker([userLatitude, userLongitude]).addTo(map)
+                            .bindPopup("You are here")
+                            .openPopup();
+                    }, function(error) {
+                        console.log("Geolocation error: " + error.message);
+                    });
+                }
+            </script>
+            <a href="food.html" class="back-home">⬅ Back to Home</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Freshs Cambodia</p>
+    </footer>
+
+</body>
+</html>
