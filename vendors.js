@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>${vendor.description}</p>
             <a href="${vendor.link}" target="_blank">Visit</a>
         `;
-
         vendorList.appendChild(vendorCard);
     });
 });
