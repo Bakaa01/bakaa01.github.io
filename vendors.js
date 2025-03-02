@@ -4,21 +4,21 @@ document.addEventListener("DOMContentLoaded", function() {
             name: "Happy Farm Cambodia",
             location: "Siem Reap",
             description: "Sustainable organic farm offering fresh produce and farm tours.",
-            image: "happyfarm.jpg",
+            image: "images/happy-farm.jpg",
             link: "https://happyandcofarm.com/"
         },
         {
             name: "Khmer Organic Cooperative",
             location: "Phnom Penh",
             description: "A cooperative promoting organic farming with a farm-to-table restaurant.",
-            image: "khmer-organic.jpg",
+            image: "images/khmer-organic.jpg",
             link: "https://khmer-organic.com/"
         },
         {
             name: "La Plantation",
             location: "Kampot",
             description: "Famous for Kampot pepper and organic spices, offering guided tours.",
-            image: "la-plantation.jpg",
+            image: "images/la-plantation.jpg",
             link: "https://laplantation.com"
         }
     ];
